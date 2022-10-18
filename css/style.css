@@ -130,7 +130,7 @@ h2 {
 }
 
 .flip-card-back{
-     background-color: rgba(250, 235, 215);
+     background-color: blanchedalmond;
      color: black;
      transform: rotateY(180deg);
      border-radius: .45em;
