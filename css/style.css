@@ -30,6 +30,7 @@
 body {
      background-color: rgba(255, 235, 205, 0.436);
      font-family: 'Arial';
+     margin: 1em;
 }
 
 
@@ -38,32 +39,36 @@ body {
 /*******************************************/
 header {
      display: flex;
-     justify-content: space-around;
-     font-size: medium;
+     justify-content: center;
+     font-size: 1em;
      font-family: 'Garamond';
+     text-align: center;
 }
 
 main {
      padding: .5em;
      display: flex;
      flex-direction: column;
-     font-family: 'Arial';
+     font-family: 'Calibri';
 }
 
 .heading {
      text-align: center;
      font-family: 'Garamond';
      font-size: 1.2em;
+     padding: .2em;
+     height: 3em;
 }
 
 hr {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, transparent, rgba(72, 11, 72, 0.677), transparent);  
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.864), transparent);  
 }
 
 h2 {
      font-size: 1.2em;
+     padding: .5em;
 }
 
 .container {
@@ -77,13 +82,13 @@ h2 {
      gap: 20px 30px;
 }
 
-@media screen and (min-width:250px) and (max-width:600px) {
+@media only screen and (min-width:250px) and (max-width:600px) {
      .container{
        grid-template-columns: repeat(1,1fr);
      }
    }
 
-@media screen and (min-width:600px) and (max-width:870px) {
+@media only screen and (min-width:600px) and (max-width:870px) {
      .container{
        grid-template-columns: repeat(2,1fr);
      }
@@ -110,12 +115,13 @@ h2 {
      transition: transform 0.3s;
      transform-style: preserve-3d;
 }
+.flip-card:active .flip-card-inner,
+.flip-card:active .flip-card-inner,
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 
-.flip-card:hover .flip-card-inner {
-     transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back{
+.flip-card-front, .flip-card-back {
      position: absolute;
      width: 100%;
      height: 100%;
@@ -123,27 +129,35 @@ h2 {
      backface-visibility: hidden;
 }
 
-.flip-card-front{
-     background-color: blanchedalmond;
+.flip-card-front {
+     background: rgb(255,255,255);
+     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,235,205,1) 100%);
      color: black;
      border-radius: .45em;
 }
 
 .flip-card-back{
-     background-color: blanchedalmond;
+     background: rgb(255,255,255);
+     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,235,205,1) 100%);
      color: black;
      transform: rotateY(180deg);
-     border-radius: .45em;
+     border-radius: .3em;
+     text-align: center;
 }
 
 .flip-card-back > p {
      font-size: medium;
      color: black;
-     padding: .5em;
+     padding: .1em;
+     font-family: 'Calibri';
+}
+
+.field {
+     font-weight: bold;
 }
 
 footer {
-
+     text-align: center;
 }
 
 /******************************************
